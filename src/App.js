@@ -24,11 +24,6 @@ import Search from './pages/search'
       <div className="App" style={{backgroundColor:'#ccc'}}>
           <Search/>
           <h1>ccc</h1>
-          <h1>ccc</h1>
-          <h1>ccc</h1>
-          <h1>ccc</h1>
-          <h1>ccc</h1>
-          <h1>ccc</h1>
       </div>
     );
   }
