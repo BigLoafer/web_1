@@ -1,8 +1,20 @@
 .con{
-    display: flex;
+   display: flex;
+   flex-direction: column;
+}
+.search{
+    display: inline-flex;
     flex-direction: row;
-    align-items: center;
-    height: 80px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.searchCon{
+    display: flex;
+    flex: 1;
     justify-content: center;
 }
 
@@ -12,9 +24,16 @@
 }
 .form{
     margin-left: 5px;
-    flex: 1
+    flex: 1;
+    align-self: center;
+    height: 30px
+}
+.input{
+    height: 20px
 }
 .login{
     display: inline-flex;
     color:black;
+    align-self: center;
+    margin-left: 5px
 }
