@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './search.css';
-import { message } from 'antd';
+import { Toast,Button,TabBar } from 'antd-mobile';
+import 'antd-mobile/dist/antd-mobile.css';  
+
 
 export default class Search extends Component {
 
@@ -8,6 +10,10 @@ export default class Search extends Component {
         super();
         this.state = {
             bg: 'transparent'
+        }
+       var data= new Array();
+        for (let index = 0; index < 100; index++) {
+            data.concat(index);
         }
     }
 
@@ -24,10 +30,11 @@ export default class Search extends Component {
     }
 
     login = () => {
-        message.success('登录');
+        Toast.loading("登录")
     };
 
     render() {
+
         return (
             <div className='con'>
                 <div className='search' style={{ backgroundColor: this.props.bg }}>
@@ -40,6 +47,7 @@ export default class Search extends Component {
                     <span className='login' onClick={this.login}>登录</span>
                     <span className='login'>登录</span>
                 </div>
+                <Button>start</Button>
             </div>
         );
     }

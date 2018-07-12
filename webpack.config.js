@@ -16,6 +16,9 @@ module.exports = {
                 loader: 'babel-loader',
                 options: {
                     presets: ['es2015', 'stage-2', 'react'],
+                    plugins:[
+                        ["import",{"libraryName":"antd-mobile","style":"css"}]
+                    ]
                 }
             },
             exclude: /node_modules/

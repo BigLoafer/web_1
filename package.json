@@ -4,12 +4,14 @@
   "private": true,
   "dependencies": {
     "antd": "^3.6.6",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4",
+    "antd-mobile": "^2.2.1",
+    "bootstrap": "^4.1.1",
     "json-loader": "^0.5.4",
     "json5-loader": "^0.6.0",
-    "jsx-loader": "^0.13.2"
+    "jsx-loader": "^0.13.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

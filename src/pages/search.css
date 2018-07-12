@@ -6,10 +6,6 @@
     display: inline-flex;
     flex-direction: row;
     height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 .searchCon{
@@ -36,4 +32,10 @@
     color:black;
     align-self: center;
     margin-left: 5px
+}
+.div1{
+    margin-top: 60px
+}
+.btn{
+    background-color: aqua;
 }
