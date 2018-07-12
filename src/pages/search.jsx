@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './search.css';
-import { Toast,Button,TabBar } from 'antd-mobile';
-import 'antd-mobile/dist/antd-mobile.css';  
+import { Toast,Button } from 'antd-mobile';
 
 
 export default class Search extends Component {
