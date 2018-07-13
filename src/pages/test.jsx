@@ -20,6 +20,7 @@ export default class TestPager extends Component{
                 title
             </NavBar>
             <h1>Test</h1>
+            <h1>{this.props.location.state}</h1>
         </div>
         );
     }

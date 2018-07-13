@@ -29,8 +29,9 @@ export default class Search extends Component {
         Toast.loading("登录")
     };
 
+
     goToTest=()=>{
-        this.props.history.push("/test");
+        this.props.history.push({pathname:'/test',state:'Testccc'});
     }
     render() {
         

@@ -62,7 +62,7 @@ export default class App extends Component {
             }}
             data-seed="logId"
           >
-          <Search history={this.props.history}/>
+          <Search {...this.props}/>
           </TabBar.Item>
           <TabBar.Item
             title="口碑"
