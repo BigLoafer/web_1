@@ -2,7 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
+import Test from './pages/test';
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const Pages=()=>{
+    // console.log(browserHistory+'-------search')
+    return(
+     <Router >
+         <Switch>
+            <Route exact path='/' component={App}/>
+            <Route  path='/test' component={Test}/>
+         </Switch>
+    </Router>
+    )
+}
+
+ReactDOM.render(<Pages />, document.getElementById('root'));
 registerServiceWorker();

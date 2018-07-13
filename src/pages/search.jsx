@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './search.css';
 import { Toast,Button } from 'antd-mobile';
+// import {browserHistory as history } from 'react-router';
+import {  Link,withRouter,Router } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 export default class Search extends Component {
@@ -10,13 +13,15 @@ export default class Search extends Component {
         this.state = {
             bg: 'transparent'
         }
-       var data= new Array();
-        for (let index = 0; index < 100; index++) {
-            data.concat(index);
-        }
     }
 
+    static contextTypes = {
+        router: PropTypes.object.isRequired
+      };
+
     componentDidMount() {
+        console.log(JSON.stringify(this.context.router.history)+"---22--");
+
         window.onscroll = (event) => {
             let realHeight = document.documentElement.scrollTop || document.body.scrollTop;
             let op = 0.8 * (realHeight / 142);
@@ -32,8 +37,11 @@ export default class Search extends Component {
         Toast.loading("登录")
     };
 
+    goToTest=()=>{
+        this.props.history.push("/test");
+    }
     render() {
-
+        
         return (
             <div className='con'>
                 <div className='search' style={{ backgroundColor: this.props.bg }}>
@@ -46,7 +54,10 @@ export default class Search extends Component {
                     <span className='login' onClick={this.login}>登录</span>
                     <span className='login'>登录</span>
                 </div>
-                <Button>start</Button>
+               <Link to='/test'>
+                    <Button >start</Button>
+               </Link>
+               <Button onClick={this.goToTest}>start111</Button>
             </div>
         );
     }
