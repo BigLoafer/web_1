@@ -1,15 +1,11 @@
 import React,{Component} from 'react';
-import {NavBar,Toast,Icon} from 'antd-mobile';
-import PropTypes from 'prop-types';
+import {NavBar,Icon} from 'antd-mobile';
 
 export default class TestPager extends Component{
 
-    static contextTypes = {
-        router: PropTypes.object.isRequired
-      };
 
       back=()=>{
-        this.context.router.history.goBack();
+        this.props.history.goBack();
     };
 
     render(){
@@ -23,6 +19,7 @@ export default class TestPager extends Component{
             >
                 title
             </NavBar>
+            <h1>Test</h1>
         </div>
         );
     }

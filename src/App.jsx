@@ -4,7 +4,6 @@ import Search from './pages/search.jsx'
 import KouBei from './pages/koubei.jsx'
 import { TabBar } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.css';
-import { Link, withRouter, Route } from 'react-router-dom';
 
 export default class App extends Component {
 
@@ -63,8 +62,7 @@ export default class App extends Component {
             }}
             data-seed="logId"
           >
-            {/* <Search/> */}
-            <Route component={Search} />
+          <Search history={this.props.history}/>
           </TabBar.Item>
           <TabBar.Item
             title="口碑"

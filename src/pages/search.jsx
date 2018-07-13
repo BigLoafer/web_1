@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './search.css';
 import { Toast,Button } from 'antd-mobile';
-// import {browserHistory as history } from 'react-router';
-import {  Link,withRouter,Router } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
+import {  Link } from 'react-router-dom';
 
 export default class Search extends Component {
 
@@ -15,12 +12,7 @@ export default class Search extends Component {
         }
     }
 
-    static contextTypes = {
-        router: PropTypes.object.isRequired
-      };
-
     componentDidMount() {
-        console.log(JSON.stringify(this.context.router.history)+"---22--");
 
         window.onscroll = (event) => {
             let realHeight = document.documentElement.scrollTop || document.body.scrollTop;
