@@ -1,0 +1,13 @@
+.con{
+    display: flex;
+    flex-direction: column;
+}
+.itemCon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20;
+}
+.text{
+    color: black;
+    font-size: 20;
+}

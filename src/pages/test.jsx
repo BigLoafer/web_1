@@ -4,7 +4,7 @@ import {NavBar,Icon} from 'antd-mobile';
 export default class TestPager extends Component{
 
 
-      back=()=>{
+    back=()=>{
         this.props.history.goBack();
     };
 
@@ -20,7 +20,9 @@ export default class TestPager extends Component{
                 title
             </NavBar>
             <h1>Test</h1>
-            <h1>{this.props.location.state}</h1>
+            <h1>传递过来的参数</h1>
+            <h1>{this.props.location.state.name}</h1>
+            <h1>{this.props.location.state.age}</h1>
         </div>
         );
     }

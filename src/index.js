@@ -14,7 +14,7 @@ const Pages=()=>{
             <Route  path='/test' component={Test}/>
          </Switch>
     </Router>
-    )
+    );
 }
 
 ReactDOM.render(<Pages />, document.getElementById('root'));

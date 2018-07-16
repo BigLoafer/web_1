@@ -31,7 +31,7 @@ export default class Search extends Component {
 
 
     goToTest=()=>{
-        this.props.history.push({pathname:'/test',state:'Testccc'});
+        this.props.history.push({pathname:'/test',state:{name:'nieqian',age:'23'}});
     }
     render() {
         
@@ -47,9 +47,6 @@ export default class Search extends Component {
                     <span className='login' onClick={this.login}>登录</span>
                     <span className='login'>登录</span>
                 </div>
-               <Link to='/test'>
-                    <Button >start</Button>
-               </Link>
                <Button onClick={this.goToTest}>start111</Button>
             </div>
         );

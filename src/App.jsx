@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Search from './pages/search.jsx'
 import KouBei from './pages/koubei.jsx'
+import HomeScreen from './pages/HomeScreen';
 import { TabBar } from 'antd-mobile';
-import 'antd-mobile/dist/antd-mobile.css';
 
 export default class App extends Component {
 
@@ -29,7 +28,19 @@ export default class App extends Component {
   };
 
 
+  renderBottomPic=(picPath)=>{
+    return(
+      <div style={{
+        width: '22px',
+        height: '22px',
+        background: `url(${picPath}) center center /  21px 21px no-repeat`
+      }}
+      />
+    ); 
+  };
+
   render() {
+    
     return (
       <div style={{ position: 'fixed', width: '100%', height: '100%', }} >
         <TabBar
@@ -38,22 +49,10 @@ export default class App extends Component {
           barTintColor="white"
         >
           <TabBar.Item
-            title="生活"
+            title="首页"
             key="Life"
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
+            icon={this.renderBottomPic("https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg")}
+            selectedIcon={this.renderBottomPic('https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg')}
             selected={this.state.selectedTab === 'blueTab'}
             onPress={() => {
               this.setState({
@@ -62,25 +61,13 @@ export default class App extends Component {
             }}
             data-seed="logId"
           >
-          <Search {...this.props}/>
+          <HomeScreen {...this.props}/>
           </TabBar.Item>
           <TabBar.Item
-            title="口碑"
+            title="我的"
             key="Koubei"
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
+            icon={this.renderBottomPic("https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg")}
+            selectedIcon={this.renderBottomPic('https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg')}
             selected={this.state.selectedTab === 'redTab'}
             onPress={() => {
               this.setState({
@@ -91,7 +78,6 @@ export default class App extends Component {
           >
             <KouBei />
           </TabBar.Item>
-
 
         </TabBar>
 
