@@ -1,3 +1,9 @@
+$vw_base:375;
+
+@function vw($px) {
+  @return ($px / $vw_base) * 100vw;
+}
+
 .con{
    display: flex;
    flex-direction: column;
@@ -5,7 +11,7 @@
 .search{
     display: inline-flex;
     flex-direction: row;
-    height: 60px;
+    height: vw(60);
 }
 
 .searchCon{
@@ -15,26 +21,26 @@
 }
 
 .img{
-    width: 60px;
-    height: 60px;
+    width: vw(60);
+    height: vw(60);
 }
 .form{
-    margin-left: 5px;
+    margin-left: vw(5);
     flex: 1;
     align-self: center;
-    height: 30px
+    height: vw(30)
 }
 .input{
-    height: 20px
+    height: vw(20)
 }
 .login{
     display: inline-flex;
     color:black;
     align-self: center;
-    margin-left: 5px
+    margin-left: vw(5)
 }
 .div1{
-    margin-top: 60px
+    margin-top: vw(60)
 }
 .btn{
     background-color: aqua;

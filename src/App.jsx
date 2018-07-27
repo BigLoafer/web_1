@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import KouBei from './pages/koubei.jsx'
-import HomeScreen from './pages/HomeScreen';
+import HomeScreen from './pages/HomeScreen.jsx';
 import { TabBar } from 'antd-mobile';
 
 export default class App extends Component {

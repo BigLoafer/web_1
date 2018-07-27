@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './search.css';
+import './search.scss';
 import { Toast,Button } from 'antd-mobile';
 import {  Link } from 'react-router-dom';
 
@@ -31,7 +31,7 @@ export default class Search extends Component {
 
 
     goToTest=()=>{
-        this.props.history.push({pathname:'/test',state:{name:'nieqian',age:'23'}});
+        this.props.history.push({pathname:'/test', state:{name:'nieqian',age:'23'}});
     }
     render() {
         
